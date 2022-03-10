@@ -58,6 +58,11 @@ jobs:
 
           df -h
 
+      - name: HelloWorld
+        run: |
+          cd /home/user/lede/package/lean/ && git clone https://github.com/jerrykuku/lua-maxminddb.git
+          git clone https://github.com/jerrykuku/luci-app-vssr.git
+
       - name: OpenClash
         run: |
           mkdir package/luci-app-openclash
@@ -95,9 +100,9 @@ jobs:
           CONFIG_LIBCURL_FTP=y
           CONFIG_LIBCURL_HTTP=y
           CONFIG_LIBCURL_NO_SMB="!"
-          CONFIG_LIBCURL_OPENSSL=y
+          #CONFIG_LIBCURL_OPENSSL=y
           CONFIG_LIBCURL_PROXY=y
-          CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=-1
+          #CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=-1
           CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_ca-certificates=y
           CONFIG_PACKAGE_coreutils=y
@@ -106,7 +111,7 @@ jobs:
           CONFIG_PACKAGE_curl=y
           CONFIG_PACKAGE_dnsforwarder=y
           CONFIG_PACKAGE_dnsproxy=y
-          CONFIG_PACKAGE_hd-idle=y
+          #CONFIG_PACKAGE_hd-idle=y
           CONFIG_PACKAGE_ip-full=y
           # CONFIG_PACKAGE_ip-tiny is not set
           CONFIG_PACKAGE_iptables-mod-extra=y
@@ -131,18 +136,19 @@ jobs:
           CONFIG_PACKAGE_libruby=y
           CONFIG_PACKAGE_libuv=y
           CONFIG_PACKAGE_libyaml=y
-          CONFIG_PACKAGE_luci-app-hd-idle=y
-          CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+          #CONFIG_PACKAGE_luci-app-hd-idle=y
+          #CONFIG_PACKAGE_luci-app-jd-dailybonus=y
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-openclash=y
-          CONFIG_PACKAGE_luci-app-samba=y
+          CONFIG_PACKAGE_luci-app-vssr=y
+          #CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSFORWARDER=y
           CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSPROXY=y
-          CONFIG_PACKAGE_luci-app-zerotier=y
-          CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
+          #CONFIG_PACKAGE_luci-app-zerotier=y
+          #CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
           CONFIG_PACKAGE_netdata=y
           CONFIG_PACKAGE_ruby=y
           CONFIG_PACKAGE_ruby-bigdecimal=y
@@ -156,7 +162,7 @@ jobs:
           CONFIG_PACKAGE_ruby-stringio=y
           CONFIG_PACKAGE_ruby-strscan=y
           CONFIG_PACKAGE_ruby-yaml=y
-          CONFIG_PACKAGE_zerotier=y
+          #CONFIG_PACKAGE_zerotier=y
           CONFIG_PACKAGE_luci-theme-argon=y                     
           EOF
 
