@@ -55,15 +55,16 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
-          git clone https://github.com/jerrykuku/luci-theme-argon.git
-          git clone https://github.com/rosywrt/luci-theme-rosy.git
+          git clone https://github.com/kenzok8/small-package
+          #git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
+          #git clone https://github.com/jerrykuku/luci-theme-argon.git
+          #git clone https://github.com/rosywrt/luci-theme-rosy.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
-          git clone https://github.com/jerrykuku/lua-maxminddb.git
+          #git clone https://github.com/jerrykuku/lua-maxminddb.git
           git clone https://github.com/jerrykuku/luci-app-vssr.git      
-          git clone https://github.com/pymumu/smartdns.git
-          git clone https://github.com/pymumu/openwrt-smartdns.git
-          git clone https://github.com/pymumu/luci-app-smartdns.git
+          #git clone https://github.com/pymumu/smartdns.git
+          #git clone https://github.com/pymumu/openwrt-smartdns.git
+          #git clone https://github.com/pymumu/luci-app-smartdns.git
               
       - name: OpenClash
         run: |
@@ -127,7 +128,7 @@ jobs:
           # CONFIG_PACKAGE_wsdd2 is not set
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
-          CONFIG_PACKAGE_luci-app-openclash=y
+          #CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-vssr=y
           CONFIG_PACKAGE_luci-app-smartdns=y
                           
