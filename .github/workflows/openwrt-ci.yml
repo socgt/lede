@@ -50,7 +50,7 @@ jobs:
           
           df -h
       
-      - name: 自定义插件主题。
+      - name: 自定义插件主题
         run: |
           cd package
           mkdir openwrt-packages
@@ -58,13 +58,9 @@ jobs:
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           git clone https://github.com/xiaorouji/openwrt-passwall.git
-               
-      - name: HelloWorld
-        run: |
-          cd lede/package/lean/
           git clone https://github.com/jerrykuku/lua-maxminddb.git
-          git clone https://github.com/jerrykuku/luci-app-vssr.git  
-
+          git clone https://github.com/jerrykuku/luci-app-vssr.git      
+     
       - name: OpenClash
         run: |
           mkdir package/luci-app-openclash
